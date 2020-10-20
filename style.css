@@ -45,6 +45,7 @@ nav li:hover {
 
 #mainContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
