@@ -1,0 +1,42 @@
+* {
+    border: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Englebert', sans-serif;
+}
+
+#headContainer {
+    position: fixed;
+    background-color: #ECC66D;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+#loga {
+    float: right;
+}
+
+nav {
+    margin-left: 100px;
+    align-items: center;
+}
+
+nav li {
+    font-size: 2.5rem;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    display: inline-block;
+    justify-content: space-evenly;
+
+}
+
+nav li:hover {
+    color: white;
+}
