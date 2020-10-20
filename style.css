@@ -1,5 +1,5 @@
 * {
-    border: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -39,4 +39,20 @@ nav li {
 
 nav li:hover {
     color: white;
+}
+
+#mainContainer {
+    display: flex;
+}
+
+#eventOne {
+    padding-top: 100px;
+    position: relative;
+    border: 2px solid black;
+
+    background: black;
+}
+
+#eventTwo {
+    background: black;
 }
