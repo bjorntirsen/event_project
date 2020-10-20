@@ -9,6 +9,8 @@ body {
 }
 
 #headContainer {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     background-color: #ECC66D;
     width: 100%;
@@ -45,14 +47,20 @@ nav li:hover {
     display: flex;
 }
 
-#eventOne {
+.eventPic {
     padding-top: 100px;
-    position: relative;
-    border: 2px solid black;
-
-    background: black;
+    padding-top: 100px;
+    justify-content: space-evenly;
 }
 
 #eventTwo {
     background: black;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+    background-color: #ECC66D;
 }
