@@ -45,12 +45,16 @@ nav li:hover {
 
 #mainContainer {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .eventPic {
-    padding-top: 100px;
-    padding-top: 100px;
+    padding-top: 200px;
     justify-content: space-evenly;
+}
+
+.eventText p {
+    padding-top: 10px;
 }
 
 #eventTwo {
@@ -61,6 +65,6 @@ nav li:hover {
     position: fixed;
     bottom: 0px;
     width: 100%;
-    justify-content: center;
+    text-align: center;
     background-color: #ECC66D;
 }
