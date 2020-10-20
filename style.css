@@ -68,3 +68,23 @@ nav li:hover {
     text-align: center;
     background-color: #ECC66D;
 }
+/* Regler för om oss */
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent {
+    margin-top: 100px;
+    justify-content: space-evenly;
+}
+
+.mainContent div {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin: 50px;
+}
+
+.mainContent h3 {
+    padding: 15px;
+}
