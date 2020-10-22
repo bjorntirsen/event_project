@@ -90,6 +90,8 @@ nav li:hover {
     padding: 15px;
 }
 /* Regler för EventList */
-#eventDiv {
-    margin-top: 200px;
+
+.eventDiv {
+    padding-top: 200px;
+    justify-content: space-evenly;
 }

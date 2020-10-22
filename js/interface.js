@@ -33,44 +33,41 @@ class Interface {
 
   displayEventsOnEventList() {
     this.updateFromLocalStorage();
-    let mainContent = document.getElementById("mainContainer");
-    let div = document.createElement("div");
-    div.innerHTML = ""
-    div.setAttribute("id", "eventDiv");
-    mainContent.appendChild(div);
-    this.eventDiv(this.eventList.eventArray[0])
+    for (let i = 0; i < this.eventList.eventArray.length; i++) {
+      this.eventDiv(this.eventList.eventArray[i])
+    }
   }
 
   eventDiv(event){
-    let div = document.getElementById("eventDiv")
+    let div = document.getElementById("mainContainer");
+    //Create event div
     let eventDiv = document.createElement("div"); //img
     eventDiv.classList.add("eventDiv");
+    div.appendChild(eventDiv);
+    //Create image and insert to div
     let img = document.createElement("img");
     img.setAttribute("src", event.img);
-    div.appendChild(img)
-
+    eventDiv.appendChild(img)
+    //Create text div
     let eventInfoDiv = document.createElement("div");
-    eventInfoDiv.classList.add("eventDiv");
+    eventInfoDiv.classList.add("eventInfoDiv");    
+    //Create and add all p tags to eventInfoDiv
     let nameP = document.createElement("p");
-    nameP.textContent = event.name
-    eventInfoDiv.appendChild(nameP)
-    div.appendChild(eventInfoDiv)
+    nameP.textContent = event.name;
+    eventInfoDiv.appendChild(nameP);
 
     let locationP = document.createElement("p");
-    locationP.textContent = event.location
-    eventInfoDiv.appendChild(locationP)
+    locationP.textContent = event.location;
+    eventInfoDiv.appendChild(locationP);
 
     let dateP = document.createElement("p");
-    dateP.textContent = event.date
-    eventInfoDiv.appendChild(dateP)
+    dateP.textContent = event.date;
+    eventInfoDiv.appendChild(dateP);
 
     let genreP = document.createElement("p");
-    genreP.textContent = event.genre
-    eventInfoDiv.appendChild(genreP)
+    genreP.textContent = event.genre;
+    eventInfoDiv.appendChild(genreP);
 
-
+    eventDiv.appendChild(eventInfoDiv);
   }
-
 }
-
-//Kolla i local-storage om det finns något object
