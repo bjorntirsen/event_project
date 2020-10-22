@@ -7,15 +7,18 @@ class Interface {
   displayEventsOnEventList() {
     this.eventList.updateFromLocalStorage();
     for (let i = 0; i < this.eventList.eventArray.length; i++) {
-      this.eventDiv(this.eventList.eventArray[i])
+      this.eventDiv(this.eventList.eventArray[i], i)
     }
+
   }
 
-  eventDiv(event){
+  eventDiv(event, i){
+      let id = ("event"+i)
     let div = document.getElementById("mainContainer");
     //Create event div
     let eventDiv = document.createElement("div"); //img
     eventDiv.classList.add("eventDiv");
+    eventDiv.setAttribute("id", id);
     div.appendChild(eventDiv);
     //Create image and insert to div
     let img = document.createElement("img");
@@ -84,7 +87,12 @@ class Interface {
     document.getElementById("mainContainer").innerHTML = "";
     //kod för att sortera arrayen på datum
     for (let i = 0; i < this.displayebleEvents.length; i++) {
-        this.eventDiv(this.displayebleEvents[i])
+        this.eventDiv(this.displayebleEvents[i], i)
     }
+
+  }
+
+  eventDetailsEventListner() {
+      
   }
 }

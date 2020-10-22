@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function(e){
     if (document.URL.includes("events.html")) {
         my_interface.displayEventsOnEventList();
         my_interface.filterButtonEventListener();
+        
+    }
+    if (document.URL.includes("index.html")) {
+        
     }
 })
 
