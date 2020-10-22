@@ -1,6 +1,7 @@
 class Interface {
   constructor() {
-    this.eventList = new EventList(this);   
+    this.eventList = new EventList(this);
+    this.displayebleEvents = []
   }
 
   displayEventsOnEventList() {
@@ -45,40 +46,45 @@ class Interface {
 
   //Add eventlistener to filter button
   filterButtonEventListener() {
-      let self = this;
+    let self = this;
     let filterBtn = document.getElementById("filterBtn");
     filterBtn.addEventListener("click", function(e) {
+        self.displayebleEvents = self.eventList.eventArray;
         let genre = document.getElementById("genre");
-        if (genre.value == "all") {
-            self.displayAll();
-        }
-        else if (genre.value == "concert") {
-            self.displayConcert();
+        let year = document.getElementById("year");
+        if (genre.value == "concert") {
+            self.filterConcert();
         }
         else if (genre.value == "theater") {
-            self.displayTheater();
+            self.filterTheater();
         }
+        if (year.value == "2020") {
+            self.filter2020();
+        }
+        else if (year.value == "2021") {
+            self.filter2021();
+        }
+        self.displayFilteredEvents();
     })
   }
-  displayAll() {
+  
+  filterConcert() {
+    this.displayebleEvents = this.displayebleEvents.filter(element => element.genre == "Concert");
+  }
+  filterTheater() {
+    this.displayebleEvents = this.displayebleEvents.filter(element => element.genre == "Arts & Theater");
+  }
+  filter2020() {
+    this.displayebleEvents = this.displayebleEvents.filter(element => Number(element.date) < 209999);
+  }
+  filter2021() {
+    this.displayebleEvents = this.displayebleEvents.filter(element => Number(element.date) > 209999);
+  }
+  displayFilteredEvents() {
     document.getElementById("mainContainer").innerHTML = "";
     //kod för att sortera arrayen på datum
-    for (let i = 0; i < this.eventList.eventArray.length; i++) {
-        this.eventDiv(this.eventList.eventArray[i])
-    }
-  }
-  displayConcert() {
-    document.getElementById("mainContainer").innerHTML = "";
-    let filteredArray = this.eventList.eventArray.filter(element => element.genre == "Concert");
-    for (let i = 0; i < filteredArray.length; i++) {
-        this.eventDiv(filteredArray[i])
-    }
-  }
-  displayTheater() {
-    document.getElementById("mainContainer").innerHTML = "";
-    let filteredArray = this.eventList.eventArray.filter(element => element.genre == "Arts & Theater");
-    for (let i = 0; i < filteredArray.length; i++) {
-        this.eventDiv(filteredArray[i])
+    for (let i = 0; i < this.displayebleEvents.length; i++) {
+        this.eventDiv(this.displayebleEvents[i])
     }
   }
 }
