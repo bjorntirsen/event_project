@@ -89,3 +89,7 @@ nav li:hover {
 .mainContent h3 {
     padding: 15px;
 }
+/* Regler för EventList */
+#eventDiv {
+    margin-top: 400px;
+}

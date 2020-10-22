@@ -1,7 +1,9 @@
 class Interface {
   constructor() {
     this.eventList = new EventList();
-    this.initializeFiveEvents();
+    if (localStorage.getItem("data") == null) {
+      this.initializeFiveEvents();
+    }      
   }
   //Creates five "default" events
   initializeFiveEvents() {
@@ -16,8 +18,30 @@ class Interface {
     let event5 = new Event("House of Comedy", "201020", "Arts & Theater", "Älghjärtat Stockholm", "pictures/comedy.jpg");
     this.eventList.eventArray.push(event5);
     console.log(this.eventList.eventArray);
+    this.updateToLocalStorage();
   }
-  
+
+  updateToLocalStorage() {
+    let dataStringForm = JSON.stringify(this.eventList.eventArray);
+    localStorage.setItem("data", dataStringForm);
+  }
+
+  updateFromLocalStorage() {
+    let dataObjectForm = JSON.parse(localStorage.getItem("data"));
+    this.eventList.eventArray = dataObjectForm;
+  }
+
+  displayEventsOnEventList() {
+    this.updateFromLocalStorage();
+    let mainContent = document.getElementById("mainContainer");
+
+    let div = document.createElement("div");
+    div.innerHTML = "TESTAR";
+    div.setAttribute("id", "eventDiv");
+    mainContent.appendChild(div);
+  }
+
+
 }
 
 //Kolla i local-storage om det finns något object
