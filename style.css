@@ -6,6 +6,19 @@
 
 body {
     font-family: 'Englebert', sans-serif;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 10px;
+}
+
+select {
+    font-size: 1.5rem;
+}
+
+button {
+    font-size: 1.5rem;
 }
 
 #headContainer {
@@ -92,6 +105,11 @@ nav li:hover {
 /* Regler för EventList */
 
 .eventDiv {
-    padding-top: 200px;
+    padding-top: 100px;
     justify-content: space-evenly;
+}
+
+.filterSection {
+    padding-top: 150px;
+    margin-left: 100px;
 }

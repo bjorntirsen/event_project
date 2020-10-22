@@ -70,4 +70,43 @@ class Interface {
 
     eventDiv.appendChild(eventInfoDiv);
   }
+
+  //Add eventlistener to filter button
+  filterButtonEventListener() {
+      let self = this;
+    let filterBtn = document.getElementById("filterBtn");
+    filterBtn.addEventListener("click", function(e) {
+        let genre = document.getElementById("genre");
+        if (genre.value == "all") {
+            self.displayAll();
+        }
+        else if (genre.value == "concert") {
+            self.displayConcert();
+        }
+        else if (genre.value == "theater") {
+            self.displayTheater();
+        }
+    })
+  }
+  displayAll() {
+    document.getElementById("mainContainer").innerHTML = "";
+    //kod för att sortera arrayen på datum
+    for (let i = 0; i < this.eventList.eventArray.length; i++) {
+        this.eventDiv(this.eventList.eventArray[i])
+    }
+  }
+  displayConcert() {
+    document.getElementById("mainContainer").innerHTML = "";
+    let filteredArray = this.eventList.eventArray.filter(element => element.genre == "Concert");
+    for (let i = 0; i < filteredArray.length; i++) {
+        this.eventDiv(filteredArray[i])
+    }
+  }
+  displayTheater() {
+    document.getElementById("mainContainer").innerHTML = "";
+    let filteredArray = this.eventList.eventArray.filter(element => element.genre == "Arts & Theater");
+    for (let i = 0; i < filteredArray.length; i++) {
+        this.eventDiv(filteredArray[i])
+    }
+  }
 }

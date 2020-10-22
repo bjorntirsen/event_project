@@ -24,9 +24,12 @@ rel="stylesheet">
     <section class="filterSection">
         <p>Här kan du filtrera events på kategori. Eventen kommer då visas i datumordning.</p>
         <label for="genre">Kategori</label>
-        <select name="" id="genre">
-            <option value=""></option>
+        <select name="genre" id="genre">
+            <option value="all">Alla events</option>
+            <option value="concert">Musik</option>
+            <option value="theater">Teater</option>
         </select>
+        <button id="filterBtn">Filtrera events</button>
     </section>
 
     <div id="mainContainer">
