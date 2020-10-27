@@ -1,3 +1,4 @@
+//This class is like a blueprint for event objects.
 class Event {
   constructor(eventName = "", date = "", genre = "", location = "", img = "", time = "", price = "", info = "") {
     this.name = eventName;

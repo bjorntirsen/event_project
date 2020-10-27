@@ -1,6 +1,8 @@
+//This class handles all our currently existing events
 class EventList {
   constructor() {
     this.eventArray = [];
+    //Check if there is any data with key "data" in local storage. If there is no data it will execute the initializeFiveEvents method
     if (localStorage.getItem("data") == null) {
       this.initializeFiveEvents();
     }   
@@ -22,12 +24,13 @@ class EventList {
     this.updateToLocalStorage();
   }
 
-  
+  //This method translates the event array into JSON and then saves it to Local Storage
   updateToLocalStorage() {
     let dataStringForm = JSON.stringify(this.eventArray);
     localStorage.setItem("data", dataStringForm);
   }
-
+  
+  //This method takes the data from local storage and translates it from JSON into an array of event objects and then saves that array to the event array
   updateFromLocalStorage() {
     let dataObjectForm = JSON.parse(localStorage.getItem("data"));
     this.eventArray = dataObjectForm;
