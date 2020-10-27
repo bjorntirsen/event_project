@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     
     if (document.URL.includes("admin.html")) {
         my_interface.displayEventsOnAdminPage();
-        //my_interface.cUButtonEventListener();
+        my_interface.cUButtonEventListener();
     }
 })
 

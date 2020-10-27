@@ -2,7 +2,7 @@
 class Interface {
     constructor() {
 		//We are sending a reference to this object on to the EventList class
-		this.eventList = new EventList(this);
+		this.eventList = new EventList();
 		//Temporary array to include the events the user wants to display
         this.displayebleEvents = []
     }
@@ -157,10 +157,27 @@ class Interface {
 		this.displayEventsOnAdminPage();
 	}
     
-    cUButtonEventListener(){
+    cUButtonEventListener() {
+		let self = this;
 		let cUButton = document.getElementById("cuBtn");
-		cUButton.addEventListener
-    }
+		cUButton.addEventListener("click", function(e) {
+			self.createEvent();
+			self.displayEventsOnAdminPage();
+		})
+	}
+	
+	createEvent() {
+		let name = document.getElementById("inputName").value;
+		let date = document.getElementById("inputDate").value;
+		let genre = document.getElementById("genreInput").value;
+		let location = document.getElementById("locationInput").value;
+		let time = document.getElementById("timeInput").value;
+		let price = document.getElementById("priceInput").value;
+		let info = document.getElementById("infoInput").value;
+		let newEvent = new Event(name, date, genre, location, "pictures/default.jpg", time, price, info);
+		this.eventList.eventArray.push(newEvent);
+		this.eventList.updateToLocalStorage();
+	}
 
     //TODO
     eventDetailsEventListner() {
