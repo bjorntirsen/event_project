@@ -132,14 +132,14 @@ class Interface {
         updateButton.setAttribute("id", ("updateBtn"+i));
 		updateButton.innerHTML = "update";
 		updateButton.addEventListener("click", function(e){
-			console.log("hello");
 			self.updateEvent(event);
 		})
         let deleteButton = document.createElement("button");
         deleteButton.setAttribute("id", ("deleteBtn"+i));
 		deleteButton.innerHTML = "delete";
 		deleteButton.addEventListener("click", function(e){
-			self.deleteEvent(event);
+			self.eventList.deleteEvent(event);
+			self.displayEventsOnAdminPage();
 		})
         eventDiv.appendChild(updateButton);
         eventDiv.appendChild(deleteButton);
@@ -154,12 +154,12 @@ class Interface {
 		document.getElementById("priceInput").value = event.price;
 		document.getElementById("infoInput").value = event.info;
 		this.eventList.deleteEvent(event);
-		this.eventList.updateToLocalStorage();
 		this.displayEventsOnAdminPage();
 	}
     
     cUButtonEventListener(){
-
+		let cUButton = document.getElementById("cuBtn");
+		cUButton.addEventListener
     }
 
     //TODO
