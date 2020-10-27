@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         
     }
     
-    if (document.URL.includes("index.html")) {
-        
+    if (document.URL.includes("admin.html")) {
+        my_interface.displayEventsOnAdminPage();
+        //my_interface.cUButtonEventListener();
     }
 })
 

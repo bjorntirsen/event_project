@@ -11,17 +11,18 @@ class Interface {
     displayEventsOnEventList() {
         this.eventList.updateFromLocalStorage();
         for (let i = 0; i < this.eventList.eventArray.length; i++) {
-			this.eventDiv(this.eventList.eventArray[i]);
+			this.eventDiv(this.eventList.eventArray[i], i);
 		}
 
     }
 
 	//This method takes an object from the event array and translates it to an HTML div and adds it to the DOM
-    eventDiv(event) {
+    eventDiv(event, i) {
 		//First we make a refence to the div which will contain all our event divs
         let div = document.getElementById("mainContainer");
         //Create new event div
-		let eventDiv = document.createElement("div");
+        let eventDiv = document.createElement("div");
+        eventDiv.setAttribute("id", i)
 		//Give it a class
 		eventDiv.classList.add("eventDiv");
 		//We add the event div to the container
@@ -112,8 +113,34 @@ class Interface {
 
     }
 	
-	
+    //Admin methods
+    
+    displayEventsOnAdminPage() {
+        this.eventList.updateFromLocalStorage();
+        for (let i = 0; i < this.eventList.eventArray.length; i++) {
+            this.eventDiv(this.eventList.eventArray[i], i);
+            this.addButtonsToEachEvent(this.eventList.eventArray[i], i);
+		}
+    }
+    
+    //add update + delete buttons for each event
+    addButtonsToEachEvent(event, i){
+        let eventDiv = document.getElementById(i); 
+        let updateButton = document.createElement("button");
+        updateButton.setAttribute("id", ("updateBtn"+i));
+        updateButton.innerHTML = "update";
+        let deleteButton = document.createElement("button");
+        deleteButton.setAttribute("id", ("deleteBtn"+i));
+        deleteButton.innerHTML = "delete";
+        eventDiv.appendChild(updateButton);
+        eventDiv.appendChild(deleteButton);
+    }
+    
+    cUButtonEventListener(){
 
+    }
+
+    //TODO
     eventDetailsEventListner() {
 
     }
