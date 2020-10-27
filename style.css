@@ -120,3 +120,8 @@ nav li:hover {
 .hidden {
     display: none;
 }
+
+/*---detail site---*/
+#detailPic {
+  width: 800px;
+}
