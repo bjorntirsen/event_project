@@ -116,6 +116,7 @@ class Interface {
     //Admin methods
     
     displayEventsOnAdminPage() {
+		document.getElementById("mainContainer").innerHTML = "";
         this.eventList.updateFromLocalStorage();
         for (let i = 0; i < this.eventList.eventArray.length; i++) {
             this.eventDiv(this.eventList.eventArray[i], i);
@@ -125,16 +126,37 @@ class Interface {
     
     //add update + delete buttons for each event
     addButtonsToEachEvent(event, i){
-        let eventDiv = document.getElementById(i); 
+		let self = this;
+		let eventDiv = document.getElementById(i); 
         let updateButton = document.createElement("button");
         updateButton.setAttribute("id", ("updateBtn"+i));
-        updateButton.innerHTML = "update";
+		updateButton.innerHTML = "update";
+		updateButton.addEventListener("click", function(e){
+			console.log("hello");
+			self.updateEvent(event);
+		})
         let deleteButton = document.createElement("button");
         deleteButton.setAttribute("id", ("deleteBtn"+i));
-        deleteButton.innerHTML = "delete";
+		deleteButton.innerHTML = "delete";
+		deleteButton.addEventListener("click", function(e){
+			self.deleteEvent(event);
+		})
         eventDiv.appendChild(updateButton);
         eventDiv.appendChild(deleteButton);
-    }
+	}
+	
+	updateEvent(event) {
+		document.getElementById("inputName").value = event.name;
+		document.getElementById("inputDate").value = event.date;
+		document.getElementById("genreInput").value = event.genre;
+		document.getElementById("locationInput").value = event.location;
+		document.getElementById("timeInput").value = event.time;
+		document.getElementById("priceInput").value = event.price;
+		document.getElementById("infoInput").value = event.info;
+		this.eventList.deleteEvent(event);
+		this.eventList.updateToLocalStorage();
+		this.displayEventsOnAdminPage();
+	}
     
     cUButtonEventListener(){
 

@@ -29,10 +29,14 @@ class EventList {
     let dataStringForm = JSON.stringify(this.eventArray);
     localStorage.setItem("data", dataStringForm);
   }
-  
+
   //This method takes the data from local storage and translates it from JSON into an array of event objects and then saves that array to the event array
   updateFromLocalStorage() {
     let dataObjectForm = JSON.parse(localStorage.getItem("data"));
     this.eventArray = dataObjectForm;
   }
+
+	deleteEvent(event) {
+    this.eventArray.splice(event);
+	}
 }
