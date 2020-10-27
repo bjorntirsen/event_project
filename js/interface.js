@@ -150,6 +150,7 @@ class Interface {
 		document.getElementById("inputDate").value = event.date;
 		document.getElementById("genreInput").value = event.genre;
 		document.getElementById("locationInput").value = event.location;
+		document.getElementById("imgInput").value = event.img;
 		document.getElementById("timeInput").value = event.time;
 		document.getElementById("priceInput").value = event.price;
 		document.getElementById("infoInput").value = event.info;
@@ -171,10 +172,11 @@ class Interface {
 		let date = document.getElementById("inputDate").value;
 		let genre = document.getElementById("genreInput").value;
 		let location = document.getElementById("locationInput").value;
+		let img = document.getElementById("imgInput").value;
 		let time = document.getElementById("timeInput").value;
 		let price = document.getElementById("priceInput").value;
 		let info = document.getElementById("infoInput").value;
-		let newEvent = new Event(name, date, genre, location, "pictures/default.jpg", time, price, info);
+		let newEvent = new Event(name, date, genre, location, img, time, price, info);
 		this.eventList.eventArray.push(newEvent);
 		this.eventList.updateToLocalStorage();
 	}

@@ -116,3 +116,7 @@ nav li:hover {
 #crud {
   margin-top: 10px;
 }
+
+.hidden {
+    display: none;
+}
