@@ -168,6 +168,7 @@ class Interface {
 	}
 	
 	createEvent() {
+		
 		let name = document.getElementById("inputName").value;
 		let date = document.getElementById("inputDate").value;
 		let genre = document.getElementById("genreInput").value;
@@ -179,6 +180,7 @@ class Interface {
 		let newEvent = new Event(name, date, genre, location, img, time, price, info);
 		this.eventList.eventArray.push(newEvent);
 		this.eventList.updateToLocalStorage();
+		document.getElementById("eventForm").reset();
 	}
 
     //TODO
