@@ -2,7 +2,8 @@
 class Interface {
     constructor() {
 		//We are sending a reference to this object on to the EventList class
-        this.eventList = new EventList(this);
+		this.eventList = new EventList(this);
+		//Temporary array to include the events the user wants to display
         this.displayebleEvents = []
     }
 
@@ -58,9 +59,12 @@ class Interface {
         let self = this;
         let filterBtn = document.getElementById("filterBtn");
         filterBtn.addEventListener("click", function(e) {
-            self.displayebleEvents = self.eventList.eventArray;
+			//Fist we add all the events from the eventlist to the displayebleEvents array
+			self.displayebleEvents = self.eventList.eventArray;
+			//Creates references to the two dropdown menus
             let genre = document.getElementById("genre");
-            let year = document.getElementById("year");
+			let year = document.getElementById("year");
+			//Executes different methods depending on what the user selected in the dropdown menus
             if (genre.value == "concert") {
                 self.filterConcert();
             } else if (genre.value == "theater") {
@@ -70,11 +74,14 @@ class Interface {
                 self.filter2020();
             } else if (year.value == "2021") {
                 self.filter2021();
-            }
+			}
+			//Always end by calling this method which displays the filtered events
+			//Here we should have a sort by date method
             self.displayFilteredEvents();
         })
     }
 
+	//Filter methods to be used on the events
     filterConcert() {
         this.displayebleEvents = this.displayebleEvents.filter(element => element.genre == "Concert");
     }
@@ -86,15 +93,17 @@ class Interface {
     }
     filter2021() {
         this.displayebleEvents = this.displayebleEvents.filter(element => Number(element.date) > 209999);
-    }
+	}
+	
+	//Method very similar to "displayEventsOnEventList", but uses the filtered event array instead of the full events array
     displayFilteredEvents() {
         document.getElementById("mainContainer").innerHTML = "";
-        //kod för att sortera arrayen på datum
         for (let i = 0; i < this.displayebleEvents.length; i++) {
             this.eventDiv(this.displayebleEvents[i], i)
         }
-
-    }
+	}
+	
+	
 
     eventDetailsEventListner() {
 
