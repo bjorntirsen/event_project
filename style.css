@@ -1,115 +1,119 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Englebert', sans-serif;
-    font-size: 1.5rem;
+  font-family: "Englebert", sans-serif;
+  font-size: 1.5rem;
 }
 
 p {
-    margin: 10px;
+  margin: 10px;
 }
 
 select {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 button {
-    font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 #headContainer {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: #ECC66D;
-    width: 100%;
-    height: 80px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed; */
+  background-color: #ecc66d;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  margin-top: 0px;
+  padding: 0;
 }
 
 #loga {
-    float: right;
+  float: right;
 }
 
 nav {
-    margin-left: 100px;
-    align-items: center;
+  margin-left: 100px;
+  align-items: center;
 }
 
 nav li {
-    font-size: 2.5rem;
-    margin-left: 30px;
-    margin-top: 20px;
-    padding-top: 10px;
-    text-align: center;
-    display: inline-block;
-    justify-content: space-evenly;
-
+  font-size: 2.5rem;
+  margin-left: 30px;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  display: inline-block;
+  justify-content: space-evenly;
 }
 
 nav li:hover {
-    color: white;
+  color: white;
 }
 
 #mainContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .eventPic {
-    padding-top: 200px;
-    justify-content: space-evenly;
+  padding-top: 200px;
+  justify-content: space-evenly;
 }
 
 .eventText p {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 #eventTwo {
-    background: black;
+  background: black;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-    background-color: #ECC66D;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #ecc66d;
 }
 /* Regler för om oss */
 .wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mainContent {
-    margin-top: 100px;
-    justify-content: space-evenly;
+  margin-top: 100px;
+  justify-content: space-evenly;
 }
 
 .mainContent div {
-    font-size: 1.5em;
-    max-width: 600px;
-    margin: 50px;
+  font-size: 1.5em;
+  max-width: 600px;
+  margin: 50px;
 }
 
 .mainContent h3 {
-    padding: 15px;
+  padding: 15px;
 }
 /* Regler för EventList */
 
 .eventDiv {
-    padding-top: 100px;
-    justify-content: space-evenly;
+  padding-top: 100px;
+  justify-content: space-evenly;
 }
 
 .filterSection {
-    padding-top: 150px;
-    margin-left: 100px;
+  padding-top: 150px;
+  margin-left: 100px;
+}
+
+#crud {
+  margin-top: 10px;
 }
