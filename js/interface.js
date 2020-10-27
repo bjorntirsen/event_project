@@ -74,7 +74,9 @@ class Interface {
                 self.filter2020();
             } else if (year.value == "2021") {
                 self.filter2021();
-			}
+            }
+            //call sorting method here
+            self.sortByDate();
 			//Always end by calling this method which displays the filtered events
 			//Here we should have a sort by date method
             self.displayFilteredEvents();
@@ -101,7 +103,14 @@ class Interface {
         for (let i = 0; i < this.displayebleEvents.length; i++) {
             this.eventDiv(this.displayebleEvents[i], i)
         }
-	}
+    }
+    
+    //Sorting method by date from olders to newest
+
+    sortByDate() {
+        this.displayebleEvents.sort((a, b) => a.date - b.date);
+
+    }
 	
 	
 
