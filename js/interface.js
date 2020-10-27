@@ -168,15 +168,23 @@ class Interface {
 	}
 	
 	createEvent() {
-		
+
 		let name = document.getElementById("inputName").value;
+		if (name == "") name = "No name set";
 		let date = document.getElementById("inputDate").value;
+		if (date == "") date = "No date set";
 		let genre = document.getElementById("genreInput").value;
+		if (genre == "") genre = "No genre set";
 		let location = document.getElementById("locationInput").value;
+		if (location == "") location = "No location set";
 		let img = document.getElementById("imgInput").value;
+		if (img == "") img = "pictures/default.jpg";
 		let time = document.getElementById("timeInput").value;
+		if (time == "") time = "No time set";
 		let price = document.getElementById("priceInput").value;
+		if (price == "") price = "No price set";
 		let info = document.getElementById("infoInput").value;
+		if (info == "") info = "No info set";
 		let newEvent = new Event(name, date, genre, location, img, time, price, info);
 		this.eventList.eventArray.push(newEvent);
 		this.eventList.updateToLocalStorage();

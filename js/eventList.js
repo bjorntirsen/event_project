@@ -37,7 +37,6 @@ class EventList {
   }
 
 	deleteEvent(event) {
-    console.log("delete");
     this.eventArray.splice(this.eventArray.indexOf(event), 1);
     this.updateToLocalStorage();
 	}
