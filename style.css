@@ -7,6 +7,7 @@
 body {
   font-family: "Englebert", sans-serif;
   font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 p {
@@ -25,12 +26,14 @@ button {
   display: flex;
   justify-content: space-between;
   /* position: fixed; */
-  background-color: #ecc66d;
+  background-color: #fcfbf8; /**/
+  /* background-color: #ecc66d;  */
   width: 100%;
-  height: 80px;
+  height: 60px;
   margin: 0;
   margin-top: 0px;
   padding: 0;
+  position: fixed;
 }
 
 #loga {
@@ -42,8 +45,40 @@ nav {
   align-items: center;
 }
 
+/* #home {
+  background-color: #ecc66d;
+}
+
+#event {
+  background-color: #eca565;
+}
+
+#aboutUs {
+  background-color: #ec875c;
+}
+
+#admin {
+  background-color: #ec6f56;
+} */
+
+/* #home {
+  color: #ecc66d;
+}
+
+#event {
+  color: #eca565;
+}
+
+#aboutUs {
+  color: #ec875c;
+}
+
+#admin {
+  color: #ec6f56;
+} */
+
 nav li {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-left: 30px;
   margin-top: 20px;
   padding-top: 10px;
@@ -52,23 +87,25 @@ nav li {
   justify-content: space-evenly;
 }
 
-nav li:hover {
-  color: white;
+/* nav li:hover {
+  color: #f8f6f6;
+} */
+
+a {
+  color: #eb4c4b;
 }
 
 #mainContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 100px;
 }
 
 .eventPic {
   padding-top: 200px;
+  margin: 0 auto;
   justify-content: space-evenly;
-}
-
-.eventText p {
-  padding-top: 10px;
 }
 
 #eventTwo {
@@ -79,15 +116,34 @@ nav li:hover {
   bottom: 0px;
   width: 100%;
   text-align: center;
-  background-color: #ecc66d;
+  background-color: #ec875c;
 }
 /* Regler för om oss */
-.wrapper {
-  display: flex;
+.scrumTextDiv {
   justify-content: center;
 }
 
-.mainContent {
+.aboutUsDiv {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.aboutUsDiv h3 {
+  margin: 30px;
+}
+
+/* .scrumTextDiv {
+  margin-top: 35px;
+  text-align: center;
+} */
+
+/* .scrumTextDiv p {
+  margin: 50px;
+  max-width: 100%;
+  padding: 0 auto;
+} */
+
+/* .mainContent {
   margin-top: 100px;
   justify-content: space-evenly;
 }
@@ -100,8 +156,20 @@ nav li:hover {
 
 .mainContent h3 {
   padding: 15px;
-}
+} */
 /* Regler för EventList */
+
+#genre,
+#year {
+  background-color: #eb4c4b;
+  color: white;
+  font-size: 1.3rem;
+}
+
+#filterBtn {
+  background-color: #ecc66d;
+  border-radius: 2px;
+}
 
 .eventDiv {
   padding-top: 100px;
@@ -109,16 +177,30 @@ nav li:hover {
 }
 
 .filterSection {
-  padding-top: 150px;
+  padding-top: 100px;
   margin-left: 100px;
 }
 
 #crud {
-  margin-top: 10px;
+  padding-top: 100px;
 }
 
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+}
+
+.footer a {
+  margin: 7px;
+}
+/*Hidden*/
+
 .hidden {
-    display: none;
+  display: none;
 }
 
 /*---detail site---*/
