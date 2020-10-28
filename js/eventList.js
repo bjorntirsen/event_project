@@ -1,7 +1,26 @@
+//Code for the guestbook below
+//Could be divided into two methods:
+//guestbookBtnEventListener() and postToGuestbook()
 document.addEventListener("DOMContentLoaded", function(e) {
     //This only happens on the Details page
     if (document.URL.includes("details.html")) {
-        my_interface.eventList.guestbookBtnEventListener();
+		let gBBtn = document.getElementById("submitGuestbookBtn");
+		gBBtn.addEventListener("click", function(e) {
+			if (document.getElementById("guestBook").value.trim() != "") {
+				//Refence to the div which will contain the entryDivs
+				let div = document.getElementById("guestbookContainer");
+				//Create new entry div
+				let entryDiv = document.createElement("div");
+				//Give it a class
+				entryDiv.classList.add("entryDiv");
+				//Add the text to the div
+				entryDiv.innerHTML = document.getElementById("guestBook").value;
+				//We add the entry div to the container
+				div.appendChild(entryDiv);
+				//Clear the textarea
+				document.getElementById("guestBook").value = "";
+			}
+		})
     }
 })
 
@@ -13,20 +32,6 @@ class EventList {
         if (localStorage.getItem("data") == null) {
             this.initializeFiveEvents();
         }
-	}
-	
-	guestbookBtnEventListener() {
-		let self = this
-		let gBBtn = document.getElementById("submitGuestbookBtn");
-		gBBtn.addEventListener("click", function(e) {
-			if (document.getElementById("guestBook").value.trim() != "") {
-				self.postToGuestbook();
-			}			
-		})
-	}
-
-	postToGuestbook() {
-		let text = document.getElementById("guestBook").value;
 	}
 
     //Creates five "default" events
