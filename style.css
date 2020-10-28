@@ -1,168 +1,180 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Englebert", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  color: #eb4c4b;
+    font-family: "Englebert", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #eb4c4b;
 }
 
 p {
-  margin: 10px;
+    margin: 10px;
 }
 
 select {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 button {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 #headContainer {
-  display: flex;
-  justify-content: space-between;
-  /* position: fixed; */
-  background-image: linear-gradient(to right, #eb4c4b, #ecc66d); /**/
-  width: 100%;
-  height: 60px;
-  margin: 0;
-  margin-top: 0px;
-  padding: 0;
-  position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    background-image: linear-gradient(to right, #eb4c4b, #ecc66d);
+    /**/
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    margin-top: 0px;
+    padding: 0;
+    position: fixed;
 }
 
 #loga {
-  float: right;
+    float: right;
 }
 
 nav {
-  margin-left: 100px;
-  align-items: center;
+    margin-left: 100px;
+    align-items: center;
 }
 
 nav li {
-  font-size: 2rem;
-  margin-left: 30px;
-  margin-top: 20px;
-  padding-top: 10px;
-  text-align: center;
-  display: inline-block;
-  justify-content: space-evenly;
-  color: white;
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+nav li a {
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    justify-content: space-evenly;
+    color: white;
 }
 
 a {
-  color: #eb4c4b;
+    color: #eb4c4b;
 }
 
 #mainContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
 }
 
 .eventPic {
-  padding-top: 200px;
-  margin: 0 auto;
-  justify-content: space-evenly;
+    padding-top: 200px;
+    margin: 0 auto;
+    justify-content: space-evenly;
 }
 
 #eventTwo {
-  background: black;
+    background: black;
 }
 
 .footer {
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
-  background-color: #ec875c;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #ec875c;
 }
+
+
 /* Regler för om oss */
+
 .scrumTextDiv {
-  justify-content: center;
+    justify-content: center;
 }
 
 .aboutUsDiv {
-  padding-top: 100px;
-  text-align: center;
+    padding-top: 100px;
+    text-align: center;
 }
 
 .aboutUsDiv h3 {
-  margin: 30px;
+    margin: 30px;
 }
+
 
 /* Regler för EventList */
 
 #genre,
 #year {
-  background-color: #eb4c4b;
-  color: white;
-  font-size: 1.3rem;
+    background-color: #eb4c4b;
+    color: white;
+    font-size: 1.3rem;
 }
 
 #filterBtn {
-  background-color: #ecc66d;
-  border-radius: 2px;
-  font-size: 1.3rem;
+    background-color: #ecc66d;
+    border-radius: 2px;
+    font-size: 1.3rem;
 }
 
 .eventDiv {
-  padding-top: 100px;
-  justify-content: space-evenly;
+    padding-top: 100px;
+    justify-content: space-evenly;
 }
 
 .filterSection {
-  padding-top: 100px;
-  margin-left: 100px;
-  text-align: center;
+    padding-top: 100px;
+    margin-left: 100px;
+    text-align: center;
 }
 
 #crud {
-  padding-top: 100px;
-  margin-left: 45px;
+    padding-top: 100px;
+    margin-left: 45px;
 }
+
 
 /*Footer*/
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  margin: 0 auto;
-  color: white;
-  background-image: linear-gradient(to right, #eb4c4b, #ecc66d);
-}
 
-.footer a {
-  margin: 7px;
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin: 0 auto;
+    color: white;
+    background-image: linear-gradient(to right, #eb4c4b, #ecc66d);
 }
 
 #imageContainer {
-  display: flex;
-  margin: 10%;
-  margin-bottom: 50px;
+    display: flex;
+    margin: 10%;
+    margin-bottom: 50px;
 }
 
 #imageContainer img {
-  display: block;
-  max-width: 400px;
-  max-height: 400px;
-  width: auto;
-  height: auto;
+    display: block;
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
 }
+
+
 /*Hidden*/
 
 .hidden {
-  display: none;
+    display: none;
 }
 
+
 /*---detail site---*/
+
 #detailPic {
-  width: 800px;
+    width: 800px;
 }
