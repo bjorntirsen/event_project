@@ -191,8 +191,15 @@ class Interface {
 		document.getElementById("eventForm").reset();
 	}
 
-    //TODO
-    eventDetailsEventListner() {
+    takeToEventDetails() {
+        let eventDivs = document.getElementsByClassName("eventDiv");
+        console.log("hello")
+
+        for (var i=0; i < eventDivs.length; i++){
+            eventDivs[i].addEventListener("click", function(){
+                location.href = "details.html"
+            })
+        }
 
     }
 }

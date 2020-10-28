@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function(e){
     //This only happens on the Event page
     if (document.URL.includes("events.html")) {
         my_interface.displayEventsOnEventList();
-        my_interface.filterButtonEventListener();
-        
+        my_interface.filterButtonEventListener();  
+        my_interface.takeToEventDetails();
     }
     
     if (document.URL.includes("admin.html")) {
