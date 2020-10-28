@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACME</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Englebert&display=swap" 
-rel="stylesheet">
-</head>
-<body>
-    <header id="headContainer">        
-        <nav id="nav">
-            <ul>
-                <a href="index.html"><li>Hem</li></a>
-                <a href="events.html"><li>Event</li></a>
-                <a href="omoss.html"><li>Om oss</li></a>
-                <a href="admin.html"><li id="adminLink">Admin</li></a>      
-            </ul>
-        </nav>
-        <img src="pictures/loga.png" id ="loga" alt="">  
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Englebert&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="headContainer">
+      <nav id="nav">
+        <ul>
+          <a href="index.html"><li>Hem</li></a>
+          <a href="events.html"><li>Event</li></a>
+          <a href="omoss.html"><li>Om oss</li></a>
+          <a href="admin.html"><li id="adminLink">Admin</li></a>
+        </ul>
+      </nav>
+      <img src="pictures/loga.png" id="loga" alt="" />
     </header>
 
     <section class="filterSection">
-        <p>Här kan du filtrera events på kategori. Eventen kommer då visas i datumordning.</p>
-        <label for="genre">Kategori</label>
-        <select name="genre" id="genre">
-            <option value="all">Alla genrer</option>
-            <option value="concert">Musik</option>
-            <option value="theater">Teater</option>
-        </select>
-        <label for="year">År</label>
-        <select name="year" id="year">
-            <option value="all">Alla år</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-        </select>
-        <button id="filterBtn">Filtrera events</button>
+      <p>
+        Här kan du filtrera events på kategori och år. Eventen kommer då visas i
+        datumordning.
+      </p>
+      <label for="genre">Kategori</label>
+      <select name="genre" id="genre">
+        <option value="all">Alla genrer</option>
+        <option value="concert">Musik</option>
+        <option value="theater">Teater</option>
+      </select>
+      <label for="year">År</label>
+      <select name="year" id="year">
+        <option value="all">Alla år</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+      </select>
+      <button id="filterBtn">Filtrera events</button>
     </section>
 
-    <div id="mainContainer">
-        
-    </div>
+    <div id="mainContainer"></div>
 
     <footer class="footer">
-<p>© Acme Events 2020</p>
-<a target="_blank" href="https://www.facebook.com"><img src="icons/facebook.svg" alt="facebook" width="30px"></a>
-<a target="_blank" href="https://www.linkedin.com"><img src="icons/linkedin.svg" alt="linkedin" width="30px"></a>
-<a target="_blank" href="https://www.instagram.com"><img src="icons/instagram.svg" alt="instagram" width="30px"></a>
-<a target="_blank" href="https://www.twitter.com"><img src="icons/twitter.svg" alt="twitter" width="30px"></a>
+      <p>© Acme Events 2020</p>
+      <a target="_blank" href="https://www.facebook.com"
+        ><img src="icons/facebook.svg" alt="facebook" width="30px"
+      /></a>
+      <a target="_blank" href="https://www.linkedin.com"
+        ><img src="icons/linkedin.svg" alt="linkedin" width="30px"
+      /></a>
+      <a target="_blank" href="https://www.instagram.com"
+        ><img src="icons/instagram.svg" alt="instagram" width="30px"
+      /></a>
+      <a target="_blank" href="https://www.twitter.com"
+        ><img src="icons/twitter.svg" alt="twitter" width="30px"
+      /></a>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/event.js"></script>
     <script src="js/interface.js"></script>
     <script src="js/eventList.js"></script>
-</body>
+  </body>
 </html>

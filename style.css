@@ -8,6 +8,7 @@ body {
   font-family: "Englebert", sans-serif;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  color: #eb4c4b;
 }
 
 p {
@@ -26,8 +27,7 @@ button {
   display: flex;
   justify-content: space-between;
   /* position: fixed; */
-  background-color: #fcfbf8; /**/
-  /* background-color: #ecc66d;  */
+  background-image: linear-gradient(to right, #eb4c4b, #ecc66d); /**/
   width: 100%;
   height: 60px;
   margin: 0;
@@ -45,38 +45,6 @@ nav {
   align-items: center;
 }
 
-/* #home {
-  background-color: #ecc66d;
-}
-
-#event {
-  background-color: #eca565;
-}
-
-#aboutUs {
-  background-color: #ec875c;
-}
-
-#admin {
-  background-color: #ec6f56;
-} */
-
-/* #home {
-  color: #ecc66d;
-}
-
-#event {
-  color: #eca565;
-}
-
-#aboutUs {
-  color: #ec875c;
-}
-
-#admin {
-  color: #ec6f56;
-} */
-
 nav li {
   font-size: 2rem;
   margin-left: 30px;
@@ -85,11 +53,8 @@ nav li {
   text-align: center;
   display: inline-block;
   justify-content: space-evenly;
+  color: white;
 }
-
-/* nav li:hover {
-  color: #f8f6f6;
-} */
 
 a {
   color: #eb4c4b;
@@ -132,31 +97,6 @@ a {
   margin: 30px;
 }
 
-/* .scrumTextDiv {
-  margin-top: 35px;
-  text-align: center;
-} */
-
-/* .scrumTextDiv p {
-  margin: 50px;
-  max-width: 100%;
-  padding: 0 auto;
-} */
-
-/* .mainContent {
-  margin-top: 100px;
-  justify-content: space-evenly;
-}
-
-.mainContent div {
-  font-size: 1.5em;
-  max-width: 600px;
-  margin: 50px;
-}
-
-.mainContent h3 {
-  padding: 15px;
-} */
 /* Regler för EventList */
 
 #genre,
@@ -169,6 +109,7 @@ a {
 #filterBtn {
   background-color: #ecc66d;
   border-radius: 2px;
+  font-size: 1.3rem;
 }
 
 .eventDiv {
@@ -179,10 +120,12 @@ a {
 .filterSection {
   padding-top: 100px;
   margin-left: 100px;
+  text-align: center;
 }
 
 #crud {
   padding-top: 100px;
+  margin-left: 45px;
 }
 
 /*Footer*/
@@ -192,10 +135,26 @@ a {
   align-items: center;
   position: fixed;
   margin: 0 auto;
+  color: white;
+  background-image: linear-gradient(to right, #eb4c4b, #ecc66d);
 }
 
 .footer a {
   margin: 7px;
+}
+
+#imageContainer {
+  display: flex;
+  margin: 10%;
+  margin-bottom: 50px;
+}
+
+#imageContainer img {
+  display: block;
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
 }
 /*Hidden*/
 
