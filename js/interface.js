@@ -191,9 +191,9 @@ class Interface {
 		document.getElementById("eventForm").reset();
 	}
 
-    takeToEventDetails() {
+    // Method to be used on eventlist-page. When user clicks on any event, user is redirected to page details.html. 
+    eventListenerTakeToEventDetails() {
         let eventDivs = document.getElementsByClassName("eventDiv");
-        console.log("hello")
 
         for (var i=0; i < eventDivs.length; i++){
             eventDivs[i].addEventListener("click", function(){
