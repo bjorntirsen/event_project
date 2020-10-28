@@ -6,7 +6,7 @@ class EventList {
         if (localStorage.getItem("data") == null) {
             this.initializeFiveEvents();
         }
-	}
+    }
 
     //Creates five "default" events
     initializeFiveEvents() {
@@ -36,6 +36,7 @@ class EventList {
         this.eventArray = dataObjectForm;
     }
 
+    //Deletes event by using splice method and then updates local storage
     deleteEvent(event) {
         this.eventArray.splice(this.eventArray.indexOf(event), 1);
         this.updateToLocalStorage();

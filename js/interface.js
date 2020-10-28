@@ -114,13 +114,11 @@ class Interface {
     }
 
     //Sorting method by date from olders to newest
-
     sortByDate() {
         this.displayebleEvents.sort((a, b) => a.date - b.date)
     }
 
     //Admin methods
-
     displayEventsOnAdminPage() {
         document.getElementById("mainContainer").innerHTML = ""
         this.eventList.updateFromLocalStorage()
@@ -130,7 +128,7 @@ class Interface {
         }
     }
 
-    //add update + delete buttons for each event
+    //Add update + delete buttons for each event
     addButtonsToEachEvent(event, i) {
         let self = this
         let eventDiv = document.getElementById(i)
@@ -151,6 +149,7 @@ class Interface {
         eventDiv.appendChild(deleteButton)
     }
 
+	//This method displays an event object in the input fields
     updateEvent(event) {
         document.getElementById("inputName").value = event.name
         document.getElementById("inputDate").value = event.date
@@ -164,6 +163,7 @@ class Interface {
         this.displayEventsOnAdminPage()
     }
 
+	//Adds event listener to the create/update button
     cUButtonEventListener() {
         let self = this
         let cUButton = document.getElementById("cuBtn")
@@ -173,6 +173,8 @@ class Interface {
         })
     }
 
+	//Creates/updates an event based on the values of the input fields
+	//Has default values if input fields are empty
     createEvent() {
         let name = document.getElementById("inputName").value
         if (name == "") name = "No name set"
@@ -205,7 +207,7 @@ class Interface {
         document.getElementById("eventForm").reset()
     }
 
-    // Method to be used on eventlist-page. When user clicks on any event, user is redirected to page details.html.
+    //Method to be used on eventlist-page. When user clicks on any event, user is redirected to page details.html.
     eventListenerTakeToEventDetails() {
         let eventDivs = document.getElementsByClassName("eventDiv")
 
