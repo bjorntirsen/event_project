@@ -1,54 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACME</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Englebert&display=swap" 
-rel="stylesheet">
-</head>
-<body>
-    <div class="wrapper">
-        <header id="headContainer">
-            <nav id="nav">
-                <ul>
-                    <a href="index.html"><li>Hem</li></a>
-                    <a href="events.html"><li>Event</li></a>
-                    <a href="omoss.html"><li>Om oss</li></a>
-                    <a href="admin.html"><li id="adminLink">Admin</li></a>      
-                </ul>
-            </nav>
-            <img src="pictures/loga.png" id ="loga" alt="">  
-        </header>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Englebert&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="headContainer">
+      <nav id="nav">
+        <ul>
+          <a href="index.html"><li>Hem</li></a>
+          <a href="events.html"><li>Event</li></a>
+          <a href="omoss.html"><li>Om oss</li></a>
+          <a href="admin.html"><li id="adminLink">Admin</li></a>
+        </ul>
+      </nav>
+      <img src="pictures/loga.png" id="loga" alt="" />
+    </header>
 
-        <section class="mainContent">
-            <div class="textDiv, aboutUs">
-                <h3>Om oss:</h3>
-                <p>ACME events är ett företag som arrangerar evenemang runt om i Sverige.</p>
-                <p>Som företag använder vi oss av SCRUM som arbetsmetod.</p>
-            </div>
-            <div class="textDiv, scrum">
-                <h3>SCRUM:</h3>
-                <p>Vad är scrum?
-                    Agil utveckling.
-                    Kort sagt är scrum en metodik för systemutveckling. Scrum uppfanns under 1990-talet och är idag en etablerad metodik för systemutveckling som används över hela världen.
-                    
-                    En fördel med scrum är fokuseringen på affärsnytta och möjligheten att förändra projektet på ett strukturerat sätt. I scrum finns det inte en klassisk kravspecifikation utan man har istället en backlog. En backlog är kort sagt en prioriterad och levande lista med önskemål. Detta innebär att i ett projekt kan önskemål som är aktuella vid projektets start falla bort om de prioriteras ned under projektets gång och nya önskemål kan också läggas till.</p>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>© Acme Events 2020</p>
-            <a target="_blank" href="https://www.facebook.com"><img src="icons/facebook.svg" alt="facebook" width="30px"></a>
-            <a target="_blank" href="https://www.linkedin.com"><img src="icons/linkedin.svg" alt="linkedin" width="30px"></a>
-            <a target="_blank" href="https://www.instagram.com"><img src="icons/instagram.svg" alt="instagram" width="30px"></a>
-            <a target="_blank" href="https://www.twitter.com"><img src="icons/twitter.svg" alt="twitter" width="30px"></a>
-        </footer>
+    <div id="mainContainer">
+      <div class="aboutUsDiv">
+        <h3>Om oss:</h3>
+        <p>
+          ACME events är ett företag som arrangerar evenemang runt om i Sverige
+        </p>
+        <h3>SCRUM</h3>
+        <p>
+          Vad är scrum? Agil utveckling. Kort sagt är scrum en metodik för
+          systemutveckling. Scrum uppfanns under 1990-talet och är idag en
+          etablerad metodik för systemutveckling som används över hela världen.
+          En fördel med scrum är fokuseringen på affärsnytta och möjligheten att
+          förändra projektet på ett strukturerat sätt. I scrum finns det inte en
+          klassisk kravspecifikation utan man har istället en backlog. En
+          backlog är kort sagt en prioriterad och levande lista med önskemål.
+          Detta innebär att i ett projekt kan önskemål som är aktuella vid
+          projektets start falla bort om de prioriteras ned under projektets
+          gång och nya önskemål kan också läggas till.
+        </p>
+        <!-- <h3>Om oss:</h3>
+        <p>
+          ACME events är ett företag som arrangerar evenemang runt om i Sverige.
+        </p>
+        <p>Som företag använder vi oss av SCRUM som arbetsmetod.</p>
+      </div>
+      <div class="scrumTextDiv">
+        <h3>SCRUM:</h3>
+        <p>
+          Vad är scrum? Agil utveckling. Kort sagt är scrum en metodik för
+          systemutveckling. Scrum uppfanns under 1990-talet och är idag en
+          etablerad metodik för systemutveckling som används över hela världen.
+          En fördel med scrum är fokuseringen på affärsnytta och möjligheten att
+          förändra projektet på ett strukturerat sätt. I scrum finns det inte en
+          klassisk kravspecifikation utan man har istället en backlog. En
+          backlog är kort sagt en prioriterad och levande lista med önskemål.
+          Detta innebär att i ett projekt kan önskemål som är aktuella vid
+          projektets start falla bort om de prioriteras ned under projektets
+          gång och nya önskemål kan också läggas till.
+        </p> -->
+      </div>
     </div>
+
+    <footer class="footer">
+      <p>© Acme Events 2020</p>
+      <a target="_blank" href="https://www.facebook.com"
+        ><img src="icons/facebook.svg" alt="facebook" width="30px"
+      /></a>
+      <a target="_blank" href="https://www.linkedin.com"
+        ><img src="icons/linkedin.svg" alt="linkedin" width="30px"
+      /></a>
+      <a target="_blank" href="https://www.instagram.com"
+        ><img src="icons/instagram.svg" alt="instagram" width="30px"
+      /></a>
+      <a target="_blank" href="https://www.twitter.com"
+        ><img src="icons/twitter.svg" alt="twitter" width="30px"
+      /></a>
+    </footer>
+
     <script src="js/main.js"></script>
     <script src="js/event.js"></script>
     <script src="js/interface.js"></script>
     <script src="js/eventList.js"></script>
-</body>
+  </body>
 </html>
